@@ -1,4 +1,4 @@
-/// <reference path="cordova-fabric-plugin.d.ts" />
+/// <reference path="cordova-plugin-fabric.d.ts" />
 
 var fabricApi: FabricPlugin.FabricPluginStatic = fabric;
 var answersApi: FabricPlugin.Answers = fabric.Answers;

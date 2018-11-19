@@ -1,6 +1,6 @@
 {
   "name": "@semabit/cordova-fabric",
-  "version": "1.1.15-dev",
+  "version": "1.1.16-dev",
   "description": "Cordova Fabric.io Plugin",
   "cordova": {
     "id": "cordova-plugin-fabric",

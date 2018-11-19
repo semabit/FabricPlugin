@@ -18,7 +18,7 @@ The Android version uses Gradle to get the Fabric SDK (`io.fabric.tools:gradle:1
 
 ```bash
 # Install from npm registry:
-cordova plugin add cordova-fabric-plugin --variable FABRIC_API_KEY=XXX --variable FABRIC_API_SECRET=xxx
+cordova plugin add cordova-plugin-fabric --variable FABRIC_API_KEY=XXX --variable FABRIC_API_SECRET=xxx
 
 # Or to install directly from github:
 # (replace x.x.x with the tag of the version your want, or omit for HEAD)
@@ -35,7 +35,7 @@ A TypeScript definition file for the JavaScript interface is available in the `t
 
 # API Documentation
 
-See `typings/cordova-fabric-plugin.d.ts` for documentation of the JavaScript APIs including call signatures and parameter types.
+See `typings/cordova-plugin-fabric.d.ts` for documentation of the JavaScript APIs including call signatures and parameter types.
 
 # Examples
 
