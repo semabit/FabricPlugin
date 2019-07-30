@@ -2,6 +2,7 @@
 var fs = require("fs");
 var path = require("path");
 var utilities = require("./utilities");
+var xcode = require("xcode");
 
 /**
  * This is used as the display text for the build phase block in XCode as well as the
@@ -18,9 +19,7 @@ module.exports = {
      * (dSYMs) so that Crashlytics can display stack trace information in it's web console.
      */
     addShellScriptBuildPhase: function (context, xcodeProjectPath) {
-
         var pluginConfig = utilities.getPluginConfig("ios");
-        var xcode = context.requireCordovaModule("xcode");
 
         // Read and parse the XCode project (.pxbproj) from disk.
         // File format information: http://www.monobjc.net/xcode-project-file-format.html
@@ -74,9 +73,6 @@ module.exports = {
      * by the addShellScriptBuildPhase() helper method.
      */
     removeShellScriptBuildPhase: function (context, xcodeProjectPath) {
-
-        var xcode = context.requireCordovaModule("xcode");
-
         // Read and parse the XCode project (.pxbproj) from disk.
         // File format information: http://www.monobjc.net/xcode-project-file-format.html
         var xcodeProject = xcode.project(xcodeProjectPath);

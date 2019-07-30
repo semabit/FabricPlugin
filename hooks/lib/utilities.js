@@ -5,6 +5,7 @@
 
 var path = require("path");
 var fs = require("fs");
+const ConfigParser = require('cordova-common').ConfigParser;
 
 /**
  * Used to get the path to the build.gradle file for the Android project.
@@ -24,12 +25,11 @@ module.exports = {
 
     /**
      * Used to get the name of the application as defined in the config.xml.
-     * 
+     *
      * @param {object} context - The Cordova context.
      * @returns {string} The value of the name element in config.xml.
      */
     getAppName: function(context) {
-        var ConfigParser = context.requireCordovaModule("cordova-lib").configparser;
         var config = new ConfigParser("config.xml");
         return config.name();
     },
